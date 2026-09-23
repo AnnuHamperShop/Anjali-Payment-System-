@@ -1,1 +1,197 @@
-le Re land Ke
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gift Box | Payment Verification</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#f4f7fb;
+  color:#172033;
+  min-height:100vh;
+}
+
+.header{
+  background:#101828;
+  color:white;
+  padding:22px 16px;
+  text-align:center;
+}
+
+.header h1{
+  font-size:26px;
+  letter-spacing:1px;
+}
+
+.header p{
+  margin-top:5px;
+  color:#cbd5e1;
+  font-size:13px;
+}
+
+.container{
+  max-width:620px;
+  margin:35px auto;
+  padding:0 16px;
+}
+
+.card{
+  background:white;
+  border-radius:18px;
+  padding:25px;
+  box-shadow:0 8px 30px rgba(16,24,40,.08);
+}
+
+.badge{
+  display:inline-block;
+  background:#fff3cd;
+  color:#856404;
+  padding:8px 13px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:18px;
+}
+
+h2{
+  font-size:23px;
+  margin-bottom:8px;
+}
+
+.sub{
+  color:#667085;
+  font-size:14px;
+  line-height:1.6;
+  margin-bottom:22px;
+}
+
+.details{
+  background:#f8fafc;
+  border-radius:14px;
+  padding:17px;
+}
+
+.row{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  padding:11px 0;
+  border-bottom:1px solid #e5e7eb;
+}
+
+.row:last-child{
+  border-bottom:0;
+}
+
+.label{
+  color:#667085;
+  font-size:14px;
+}
+
+.value{
+  font-weight:600;
+  text-align:right;
+}
+
+.amount{
+  color:#087443;
+  font-size:19px;
+}
+
+.notice{
+  margin-top:20px;
+  padding:17px;
+  background:#fff7ed;
+  border:1px solid #fed7aa;
+  border-radius:14px;
+  color:#9a3412;
+  line-height:1.6;
+  font-size:14px;
+}
+
+.notice strong{
+  display:block;
+  margin-bottom:5px;
+}
+
+.footer{
+  text-align:center;
+  margin-top:22px;
+  color:#98a2b3;
+  font-size:12px;
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <h1>GIFTHUB</h1>
+  <p>Payment Verification Dashboard</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+
+    <span class="badge">⏳ PAYMENT VERIFICATION PENDING</span>
+
+    <h2>Payment Verification Notice</h2>
+
+    <p class="sub">
+      Your payment details have been submitted and are currently
+      awaiting verification. The payment status will be updated
+      after successful confirmation.
+    </p>
+
+    <div class="details">
+
+      <div class="row">
+        <span class="label">Customer Name</span>
+        <span class="value">Anjali Prajapati</span>
+      </div>
+
+      <div class="row">
+        <span class="label">Mobile Number</span>
+        <span class="value">9165765941</span>
+      </div>
+
+      <div class="row">
+        <span class="label">Amount</span>
+        <span class="value amount">₹6,723.09</span>
+      </div>
+
+      <div class="row">
+        <span class="label">Status</span>
+        <span class="value">Verification Pending</span>
+      </div>
+
+    </div>
+
+    <div class="notice">
+      <strong>⚠️ Verification Time Notice</strong>
+      Payment verification may take up to 15 minutes. If the
+      payment cannot be verified within this period, please
+      contact support for a payment review and, where applicable,
+      refund processing.
+    </div>
+
+  </div>
+
+  <div class="footer">
+    © 2026 Gift Box  • Payment status shown for verification purposes
+  </div>
+
+</div>
+
+</body>
+  </html>
