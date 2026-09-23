@@ -15,11 +15,14 @@
 }
 
 body{
-  background:#080b12;
+  background:
+    radial-gradient(circle at 85% 10%,rgba(201,155,69,.10),transparent 30%),
+    #080b12;
   color:#f5f7fb;
   min-height:100vh;
 }
 
+/* SIDEBAR */
 .sidebar{
   position:fixed;
   left:0;
@@ -27,7 +30,7 @@ body{
   width:245px;
   height:100vh;
   padding:28px 20px;
-  background:linear-gradient(180deg,#111622,#090c13);
+  background:linear-gradient(180deg,#121722,#090c13);
   border-right:1px solid rgba(255,255,255,.08);
 }
 
@@ -41,27 +44,29 @@ body{
 
 .logo span{
   display:block;
-  font-size:11px;
+  font-size:10px;
   color:#8992a5;
   letter-spacing:2px;
-  margin-top:5px;
+  margin-top:6px;
 }
 
 .menu{
   padding:14px 16px;
-  border-radius:12px;
+  border-radius:13px;
   background:linear-gradient(135deg,#c99b45,#8e6426);
   color:#fff;
   font-weight:700;
   box-shadow:0 8px 25px rgba(202,153,65,.18);
 }
 
+/* MAIN */
 .main{
   margin-left:245px;
   padding:30px;
   max-width:1500px;
 }
 
+/* TOP */
 .top{
   display:flex;
   justify-content:space-between;
@@ -70,42 +75,58 @@ body{
 }
 
 .top h1{
-  font-size:27px;
+  font-size:28px;
+  letter-spacing:-.5px;
 }
 
 .top p{
   color:#8e98aa;
-  margin-top:5px;
+  margin-top:6px;
   font-size:14px;
 }
 
 .admin{
   display:flex;
   align-items:center;
-  gap:10px;
+  gap:11px;
+}
+
+.admin-info{
+  text-align:right;
+}
+
+.admin-info b{
+  font-size:13px;
+}
+
+.admin-info small{
+  color:#7e8798;
 }
 
 .avatar{
-  width:42px;
-  height:42px;
+  width:44px;
+  height:44px;
   border-radius:50%;
   display:grid;
   place-items:center;
   background:linear-gradient(135deg,#f4cf7b,#8e6426);
   color:#111;
-  font-weight:800;
+  font-weight:900;
 }
 
+/* DEMO NOTICE */
 .demo{
-  padding:13px 16px;
+  padding:14px 17px;
   margin-bottom:22px;
-  border:1px solid rgba(244,201,107,.35);
-  border-radius:12px;
-  background:rgba(244,201,107,.08);
+  border:1px solid rgba(244,201,107,.32);
+  border-radius:13px;
+  background:rgba(244,201,107,.07);
   color:#f4d990;
   font-size:13px;
+  line-height:1.5;
 }
 
+/* STAT CARDS */
 .cards{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -116,16 +137,16 @@ body{
 .card{
   background:linear-gradient(145deg,#121722,#0d1119);
   border:1px solid rgba(255,255,255,.07);
-  border-radius:18px;
+  border-radius:19px;
   padding:22px;
   box-shadow:0 15px 40px rgba(0,0,0,.22);
 }
 
 .label{
   color:#8992a5;
-  font-size:12px;
+  font-size:11px;
   text-transform:uppercase;
-  letter-spacing:1px;
+  letter-spacing:1.2px;
 }
 
 .value{
@@ -134,101 +155,112 @@ body{
   font-weight:800;
 }
 
-.green{
-  color:#55df9a;
-}
-
 .gold{
   color:#f4c96b;
 }
 
+.orange{
+  color:#ffb65c;
+}
+
+/* CONTENT GRID */
 .grid{
   display:grid;
   grid-template-columns:1.35fr .65fr;
   gap:20px;
 }
 
+/* SECTION TITLE */
 .title{
   font-size:18px;
   font-weight:750;
   margin-bottom:20px;
 }
 
+/* TRANSACTION */
 .payment{
-  padding:18px;
-  border-radius:14px;
+  padding:20px;
+  border-radius:15px;
   background:#0a0e16;
   border:1px solid rgba(255,255,255,.06);
-  margin-bottom:14px;
 }
 
 .payment-head{
   display:flex;
   justify-content:space-between;
-  gap:15px;
   align-items:center;
+  gap:15px;
 }
 
 .payment-name{
-  font-weight:700;
+  font-size:15px;
+  font-weight:750;
 }
 
 .amount{
-  font-size:21px;
-  font-weight:800;
+  font-size:23px;
+  font-weight:850;
   color:#f4c96b;
+  white-space:nowrap;
 }
 
 .badge{
   display:inline-block;
-  margin-top:7px;
-  padding:5px 9px;
+  margin-top:8px;
+  padding:6px 10px;
   border-radius:20px;
-  background:rgba(70,220,145,.1);
-  color:#55df9a;
-  font-size:11px;
-  font-weight:700;
+  background:rgba(255,170,70,.10);
+  color:#ffbd68;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.5px;
 }
 
+/* WRONG PAYMENT NOTICE */
 .notice{
-  margin-top:15px;
-  padding:13px;
-  border-radius:11px;
-  background:rgba(244,201,107,.07);
-  border:1px solid rgba(244,201,107,.18);
-  color:#d8c38e;
+  margin-top:17px;
+  padding:15px;
+  border-radius:12px;
+  background:rgba(255,170,70,.055);
+  border:1px solid rgba(255,170,70,.20);
+  color:#d4b98f;
   font-size:12px;
-  line-height:1.6;
+  line-height:1.65;
 }
 
 .notice strong{
-  color:#f4c96b;
+  color:#ffbd68;
   display:block;
-  margin-bottom:4px;
+  margin-bottom:5px;
+  font-size:13px;
 }
 
+/* DETAILS */
 .details{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:12px;
+  margin-top:17px;
 }
 
 .detail{
   padding:14px;
   background:#0a0e16;
   border-radius:12px;
+  border:1px solid rgba(255,255,255,.045);
 }
 
 .detail small{
   color:#778093;
   display:block;
-  margin-bottom:5px;
+  margin-bottom:6px;
 }
 
 .detail b{
   font-size:14px;
 }
 
+/* TIMELINE */
 .timeline{
   position:relative;
 }
@@ -236,7 +268,7 @@ body{
 .step{
   display:flex;
   gap:13px;
-  margin-bottom:22px;
+  margin-bottom:23px;
 }
 
 .dot{
@@ -244,8 +276,8 @@ body{
   height:11px;
   margin-top:5px;
   border-radius:50%;
-  background:#55df9a;
-  box-shadow:0 0 14px rgba(85,223,154,.45);
+  background:#ffb65c;
+  box-shadow:0 0 14px rgba(255,182,92,.40);
 }
 
 .step h4{
@@ -255,19 +287,22 @@ body{
 .step p{
   color:#788296;
   font-size:12px;
-  margin-top:4px;
-  line-height:1.5;
+  margin-top:5px;
+  line-height:1.55;
 }
 
+/* FOOTER */
 .footer-note{
-  margin-top:20px;
+  margin-top:22px;
   padding:15px;
   text-align:center;
   color:#747e91;
   font-size:11px;
 }
 
+/* MOBILE */
 @media(max-width:900px){
+
   .sidebar{
     position:relative;
     width:100%;
@@ -291,6 +326,7 @@ body{
 }
 
 @media(max-width:600px){
+
   .top{
     align-items:flex-start;
   }
@@ -310,13 +346,19 @@ body{
   .payment-head{
     align-items:flex-start;
   }
+
+  .amount{
+    font-size:19px;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- SIDEBAR -->
 <aside class="sidebar">
+
   <div class="logo">
     PREMIUM HAMPERS SHOP
     <span>PAYMENT DASHBOARD</span>
@@ -325,155 +367,318 @@ body{
   <div class="menu">
     💳 Payment Dashboard
   </div>
+
 </aside>
 
+
+<!-- MAIN -->
 <main class="main">
 
+  <!-- HEADER -->
   <div class="top">
+
     <div>
       <h1>Payment Overview</h1>
       <p>Transaction monitoring & verification</p>
     </div>
 
     <div class="admin">
-      <div>
+
+      <div class="admin-info">
         <b>Admin</b><br>
-        <small style="color:#7e8798;">Dashboard</small>
+        <small>Dashboard</small>
       </div>
-      <div class="avatar">P</div>
+
+      <div class="avatar">
+        P
+      </div>
+
     </div>
+
   </div>
 
+
+  <!-- DEMO WARNING -->
   <div class="demo">
-    ⚠️ <b>DEMO MODE</b> — This dashboard is a visual sample only.
-    The payment statuses shown below do not confirm any real UPI,
-    bank, card, or payment-gateway transaction.
+    ⚠️ <b>DEMO MODE</b> — This is a visual sample dashboard.
+    The transaction shown below does not verify or confirm any
+    real UPI, bank, card, or payment-gateway transaction.
   </div>
 
+
+  <!-- STAT CARDS -->
   <section class="cards">
 
     <div class="card">
-      <div class="label">Customer</div>
-      <div class="value">Anjali Prajapati</div>
+
+      <div class="label">
+        Customer
+      </div>
+
+      <div class="value">
+        Anjali Prajapati
+      </div>
+
     </div>
 
-    <div class="card">
-      <div class="label">Primary Amount</div>
-      <div class="value gold">₹6,723.90</div>
-    </div>
 
     <div class="card">
-      <div class="label">Demo Status</div>
-      <div class="value green">Successful</div>
+
+      <div class="label">
+        Transaction Amount
+      </div>
+
+      <div class="value gold">
+        ₹6,723.90
+      </div>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="label">
+        Demo Status
+      </div>
+
+      <div class="value orange">
+        Wrong Timing
+      </div>
+
     </div>
 
   </section>
 
+
+  <!-- CONTENT -->
   <section class="grid">
 
+
+    <!-- PAYMENT CARD -->
     <div class="card">
-      <div class="title">Payment Transactions</div>
+
+      <div class="title">
+        Payment Transaction
+      </div>
+
 
       <div class="payment">
+
         <div class="payment-head">
+
           <div>
-            <div class="payment-name">Transaction #01</div>
-            <span class="badge">DEMO • SUCCESSFUL</span>
+
+            <div class="payment-name">
+              Transaction #01
+            </div>
+
+            <span class="badge">
+              DEMO • WRONG PAYMENT TIMING
+            </span>
+
           </div>
 
-          <div class="amount">₹6,723.90</div>
-        </div>
 
-        <div class="notice">
-          <strong>Payment Timing Notice</strong>
-          The payment was received outside the designated payment
-          time window. This demo transaction is therefore subject
-          to payment-timing verification before final processing.
-        </div>
-      </div>
-
-      <div class="payment">
-        <div class="payment-head">
-          <div>
-            <div class="payment-name">Transaction #02</div>
-            <span class="badge">DEMO • VERIFICATION</span>
+          <div class="amount">
+            ₹6,723.90
           </div>
 
-          <div class="amount">₹6,723.09</div>
         </div>
 
+
+        <!-- NOTICE -->
         <div class="notice">
-          <strong>Payment Review</strong>
-          This amount is shown as a sample repayment/review
-          transaction. Any real refund or additional payment should
-          only be processed after verification through the actual
-          payment gateway.
+
+          <strong>
+            ⚠️ Wrong Payment Timing
+          </strong>
+
+          This demo payment was made outside the
+          designated payment time window. The transaction
+          requires verification before it can be processed
+          or finalized.
+
         </div>
+
+
+        <!-- DETAILS -->
+        <div class="details">
+
+          <div class="detail">
+
+            <small>
+              Customer Name
+            </small>
+
+            <b>
+              Anjali Prajapati
+            </b>
+
+          </div>
+
+
+          <div class="detail">
+
+            <small>
+              Mobile Number
+            </small>
+
+            <b>
+              +91 9165765941
+            </b>
+
+          </div>
+
+
+          <div class="detail">
+
+            <small>
+              Amount
+            </small>
+
+            <b>
+              ₹6,723.90
+            </b>
+
+          </div>
+
+
+          <div class="detail">
+
+            <small>
+              Reference
+            </small>
+
+            <b>
+              DEMO-672390
+            </b>
+
+          </div>
+
+
+          <div class="detail">
+
+            <small>
+              Payment Method
+            </small>
+
+            <b>
+              Online Payment — Demo
+            </b>
+
+          </div>
+
+
+          <div class="detail">
+
+            <small>
+              Verification
+            </small>
+
+            <b style="color:#ffbd68;">
+              Required
+            </b>
+
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="details">
-
-        <div class="detail">
-          <small>Customer Name</small>
-          <b>Anjali Prajapati</b>
-        </div>
-
-        <div class="detail">
-          <small>Mobile Number</small>
-          <b>+91 9165765941</b>
-        </div>
-
-        <div class="detail">
-          <small>Reference</small>
-          <b>DEMO-672390</b>
-        </div>
-
-        <div class="detail">
-          <small>Payment Method</small>
-          <b>Online Payment — Demo</b>
-        </div>
-
-      </div>
     </div>
 
+
+    <!-- ACTIVITY -->
     <div class="card">
 
-      <div class="title">Payment Activity</div>
+      <div class="title">
+        Payment Activity
+      </div>
+
 
       <div class="timeline">
 
-        <div class="step">
-          <div class="dot"></div>
-          <div>
-            <h4>Payment Submitted</h4>
-            <p>Demo transaction recorded for ₹6,723.90.</p>
-          </div>
-        </div>
 
         <div class="step">
+
           <div class="dot"></div>
+
           <div>
-            <h4>Demo Successful</h4>
-            <p>Visual success status displayed for demonstration.</p>
+
+            <h4>
+              Payment Submitted
+            </h4>
+
+            <p>
+              Demo transaction recorded for
+              ₹6,723.90.
+            </p>
+
           </div>
+
         </div>
 
-        <div class="step">
-          <div class="dot"></div>
-          <div>
-            <h4>Timing Verification</h4>
-            <p>Payment timing requires review before final processing.</p>
-          </div>
-        </div>
 
         <div class="step">
+
           <div class="dot"></div>
+
           <div>
-            <h4>Refund / Repayment Review</h4>
-            <p>Any real financial action should be confirmed through
-            the actual payment gateway.</p>
+
+            <h4>
+              Timing Check
+            </h4>
+
+            <p>
+              The demo transaction was detected
+              outside the designated payment window.
+            </p>
+
           </div>
+
         </div>
+
+
+        <div class="step">
+
+          <div class="dot"></div>
+
+          <div>
+
+            <h4>
+              Verification Required
+            </h4>
+
+            <p>
+              Transaction requires verification
+              before final processing.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="dot"></div>
+
+          <div>
+
+            <h4>
+              Final Review
+            </h4>
+
+            <p>
+              Any real financial action should be
+              confirmed through the actual payment
+              gateway.
+            </p>
+
+          </div>
+
+        </div>
+
 
       </div>
 
@@ -481,9 +686,13 @@ body{
 
   </section>
 
+
+  <!-- FOOTER -->
   <div class="footer-note">
-    DEMO / SAMPLE DASHBOARD • Premium Hampers Shop •
-    Not a real payment receipt or transaction confirmation
+
+    DEMO / SAMPLE DASHBOARD • Premium Hampers Shop
+    • Not a real payment receipt or transaction confirmation
+
   </div>
 
 </main>
